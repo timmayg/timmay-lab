@@ -1,0 +1,20 @@
+{
+  "release_notes": {
+    "product": "Tim's AWX Execution Environment",
+    "quay_repository": "https://quay.io/repository/timmayg/timmay-lab",
+    "git_repository": "https://github.com/timmayg",
+    "linkedin": "https://www.linkedin.com/in/timglen",
+    "versions": [
+      {
+        "version": "2.0",
+        "release_date": "January 23, 2025",
+        "details": [
+          "Using this guys AWX EE build as a Base",
+          "https://github.com/ansible/ansible-builder/issues/626#issuecomment-1771314409",
+          "Base Image is Red Hats Universal Base Image 9"
+          "ansible-builder builds these much faster than using quay.io/ansible/awx-ee",
+        ]
+      },
+    ]
+  }
+}
