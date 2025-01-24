@@ -25,5 +25,5 @@ dependencies:
 additional_build_steps:
   append_base:
     - ENV timmay_lab_version=v2.0
-    - RUN curl -o /runner/release-notes.json https://raw.githubusercontent.com/timmayg/timmay-lab/main/release-notes.json
+    - RUN curl -o /release-notes.json https://raw.githubusercontent.com/timmayg/timmay-lab/main/release-notes.json
 
