@@ -6,6 +6,14 @@
     "linkedin": "https://www.linkedin.com/in/timglen",
     "versions": [
       {
+        "version": "2.1",
+        "release_date": "January 23, 2025",
+        "details": [
+          "added release notes to the build (this file)",
+
+        ]
+      },
+      {
         "version": "2.0",
         "release_date": "January 23, 2025",
         "details": [
