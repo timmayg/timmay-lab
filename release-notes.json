@@ -6,6 +6,14 @@
     "linkedin": "https://www.linkedin.com/in/timglen",
     "versions": [
       {
+        "version": "2.2",
+        "release_date": "February 3, 2025",
+        "details": [
+          "Updated exec-env to use quay.",
+          "commented out a lot of stuff"
+        ]
+      },
+      {
         "version": "2.1",
         "release_date": "January 23, 2025",
         "details": [

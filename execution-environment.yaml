@@ -3,27 +3,34 @@ version: 3
 images:
   base_image:
     # completely vanilla image, works with most anything RHELish (Fedora, CentOS Stream)
-    name: registry.access.redhat.com/ubi9/ubi:latest
+    # name: registry.access.redhat.com/ubi9/ubi:latest
+    name: quay.io/ansible/awx-ee:latest
 
 dependencies:
-  # install and use a bleeding-edge Python!
+  # install and use a bleeding-edge Python!  https://devguide.python.org/versions/
+
   python_interpreter:
     # (optional) provide the name of an OS package to install
+
     package_system: python3.11
     # (optional) provide the path of the Python interpreter to use for everything else.
     # defaults to /usr/bin/python3; we'll do some sanity checking with this later...
     python_path: /usr/bin/python3.11
+
   ansible_core:
     # anything valid to `pip install` - a git ref, whatever 
     package_pip: ansible-core<2.16
-  ansible_runner:
-    package_pip: ansible-runner
-  galaxy:
-    collections:
-    - ansible.utils
+
+#  ansible_runner:
+#    package_pip: ansible-runner
+
+#  galaxy:
+#    collections:
+#    - ansible.utils
+
 
 additional_build_steps:
   append_base:
-    - ENV timmay_lab_version=v2.0
+    - ENV timmay_lab_version=v2.2
     - RUN curl -o /release-notes.json https://raw.githubusercontent.com/timmayg/timmay-lab/main/release-notes.json
 
