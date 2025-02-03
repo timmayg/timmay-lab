@@ -4,7 +4,7 @@ images:
   base_image:
     # completely vanilla image, works with most anything RHELish (Fedora, CentOS Stream)
     # name: registry.access.redhat.com/ubi9/ubi:latest
-    name: quay.io/ansible/awx-ee:latest
+    name: localhost/awx-ee:latest
 
 dependencies:
   # install and use a bleeding-edge Python!  https://devguide.python.org/versions/
