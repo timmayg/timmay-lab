@@ -6,10 +6,17 @@
     "linkedin": "https://www.linkedin.com/in/timglen",
     "versions": [
       {
-        "version": "2.3",
+        "version": "2.3x",
         "release_date": "February 3, 2025",
         "details": [
-          "added prepend_build & yum curl to exec-env"
+          "added prepend_build & yum curl to exec-env",
+          "ans_buld shows the curl command working but the release-notes file is not there",
+          "test v2.34a - ans_buld time without curl ()",
+          "test v2.34b - ans_buld time without curl ()",
+          "test v2.35a - ans_buld time with curl in prepend_base ()",
+          "test v2.35b - ans_buld time with curl in prepend_base ()",
+          "test v2.36a - ans_buld time with curl in append_base ()",
+          "test v2.36b - ans_buld time with curl in append_base ()"
         ]
       },
       {
