@@ -31,7 +31,7 @@ dependencies:
 additional_build_steps:
 #  prepend_base:
   append_base:
-    - ENV timmay_lab_version=v2.34
+    - ENV timmay_lab_version=v2.34b
 #    - RUN yum -y update && yum install -y curl --allowerasing
     - RUN curl -o /release-notes.json https://raw.githubusercontent.com/timmayg/timmay-lab/main/release-notes.json
 
