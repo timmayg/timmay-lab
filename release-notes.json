@@ -6,6 +6,13 @@
     "linkedin": "https://www.linkedin.com/in/timglen",
     "versions": [
       {
+        "version": "2.3",
+        "release_date": "February 3, 2025",
+        "details": [
+          "added prepend_build & yum curl to exec-env"
+        ]
+      },
+      {
         "version": "2.2",
         "release_date": "February 3, 2025",
         "details": [
@@ -17,7 +24,7 @@
         "version": "2.1",
         "release_date": "January 23, 2025",
         "details": [
-          "added release notes to the build (this file)",
+          "added release notes to the build (this file)"
 
         ]
       },
@@ -27,8 +34,8 @@
         "details": [
           "Using this guys AWX EE build as a Base",
           "https://github.com/ansible/ansible-builder/issues/626#issuecomment-1771314409",
-          "Base Image is Red Hats Universal Base Image 9"
-          "ansible-builder builds these much faster than using quay.io/ansible/awx-ee",
+          "Base Image is Red Hats Universal Base Image 9",
+          "ansible-builder builds these much faster than using quay.io/ansible/awx-ee"
         ]
       },
     ]
