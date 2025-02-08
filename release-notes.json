@@ -6,6 +6,14 @@
     "linkedin": "https://www.linkedin.com/in/timglen",
     "versions": [
       {
+        "version": "2.3",
+        "release_date": "February 3, 2025",
+        "details": [
+          "Updated exec-env to use ubi:latest.",
+          "commented out a lot of stuff"
+        ]
+      },
+      {
         "version": "2.3x",
         "release_date": "February 3, 2025",
         "details": [
@@ -15,7 +23,7 @@
           "test v2.34a - ans_buld time without curl (1m49s)",
           "test v2.34b - ans_buld time without curl (a long fucking time)",
           "test v2.34b1 - ans_buld time without curl (1m58s)",
-          "test v2.35a - ans_buld time with curl in prepend_base ()",
+          "test v2.35a - ans_buld time with curl in prepend_base (2m42)",
           "test v2.35b - ans_buld time with curl in prepend_base ()",
           "test v2.36a - ans_buld time with curl in append_base ()",
           "test v2.36b - ans_buld time with curl in append_base ()"

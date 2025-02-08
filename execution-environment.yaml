@@ -2,8 +2,8 @@ version: 3
 
 images:
   base_image:
-    # name: registry.access.redhat.com/ubi9/ubi:latest
-    name: localhost/awx-ee:latest
+    name: registry.access.redhat.com/ubi9/ubi:latest
+    #name: localhost/awx-ee:latest
 
 dependencies:
   # install and use a bleeding-edge Python!  https://devguide.python.org/versions/
@@ -28,11 +28,11 @@ dependencies:
 #    - ansible.utils
 
 
-additional_build_steps:
-  prepend_base:
-    - RUN curl -o /release-notes.json https://raw.githubusercontent.com/timmayg/timmay-lab/main/release-notes.json
-  append_base:
-    - ENV timmay_lab_version=v2.34b1
+# additional_build_steps:
+#  prepend_base:
+#    - RUN curl -o /release-notes.json https://raw.githubusercontent.com/timmayg/timmay-lab/main/release-notes.json
+#  append_base:
+#    - ENV timmay_lab_version=v2.34b1
 #    - RUN yum -y update && yum install -y curl --allowerasing
-    - RUN curl -o /release-notes.json https://raw.githubusercontent.com/timmayg/timmay-lab/main/release-notes.json
+#    - RUN curl -o /release-notes.json https://raw.githubusercontent.com/timmayg/timmay-lab/main/release-notes.json
 
