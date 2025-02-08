@@ -6,8 +6,9 @@ images:
     # name: localhost/awx-ee:latest
     # name: quay.io/ansible/awx-ee-minimal:latest
     # name: registry.redhat.io/ansible-automation-platform/ee-minimal-rhel8:latest
-
-dependencies:
+    # name: quay.io/centos/centos:stream9  # vanilla image
+ 
+ dependencies:
   python_interpreter:
     # (optional) provide the name of an OS package to install
     package_system: python3.11
@@ -29,12 +30,11 @@ dependencies:
 additional_build_files:
   # copy arbitrary files next to this EE def into the build context - we can refer to them later...
   - src: release-notes.json
-    dest: /configs
+    dest: configs
 
 additional_build_steps:
   prepend_base:
      - COPY _build/configs/release-notes.json /release-notes.json
-
      - RUN yum install -y git
 #    - RUN curl -o /release-notes.json https://raw.githubusercontent.com/timmayg/timmay-lab/main/release-notes.json
   append_base:
