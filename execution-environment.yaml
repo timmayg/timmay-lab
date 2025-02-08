@@ -22,12 +22,12 @@ dependencies:
   ansible_runner:
     package_pip: ansible-runner
 
-#  galaxy:
-#    collections:
-#    - ansible.utils
+  galaxy:
+    collections:
+    - ansible.utils
 
 
- additional_build_steps:
+additional_build_steps:
   prepend_base:
      - yum install -y git
 #    - RUN curl -o /release-notes.json https://raw.githubusercontent.com/timmayg/timmay-lab/main/release-notes.json
