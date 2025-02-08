@@ -2,16 +2,14 @@ version: 3
 
 images:
   base_image:
-    # name: registry.access.redhat.com/ubi9/ubi:latest
-    name: registry.redhat.io/ansible-automation-platform/ee-minimal-rhel8:latest
+    name: registry.access.redhat.com/ubi9/ubi:latest
     # name: localhost/awx-ee:latest
+    # name: quay.io/ansible/awx-ee-minimal:latest
+    # name: registry.redhat.io/ansible-automation-platform/ee-minimal-rhel8:latest
 
 dependencies:
-  # install and use a bleeding-edge Python!  https://devguide.python.org/versions/
-
   python_interpreter:
     # (optional) provide the name of an OS package to install
-
     package_system: python3.11
     # (optional) provide the path of the Python interpreter to use for everything else.
     # defaults to /usr/bin/python3; we'll do some sanity checking with this later...
@@ -29,8 +27,9 @@ dependencies:
 #    - ansible.utils
 
 
-# additional_build_steps:
-#  prepend_base:
+ additional_build_steps:
+  prepend_base:
+     - yum install -y git
 #    - RUN curl -o /release-notes.json https://raw.githubusercontent.com/timmayg/timmay-lab/main/release-notes.json
 #  append_base:
 #    - ENV timmay_lab_version=v2.34b1
