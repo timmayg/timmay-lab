@@ -6,8 +6,8 @@
     "linkedin": "https://www.linkedin.com/in/timglen",
     "versions": [
       {
-        "version": "2.3",
-        "release_date": "February 3, 2025",
+        "version": "2.4",
+        "release_date": "February 7, 2025",
         "details": [
           "Updated exec-env to use ubi:latest.",
           "commented out a lot of stuff"
