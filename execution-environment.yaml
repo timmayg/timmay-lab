@@ -26,12 +26,18 @@ dependencies:
     collections:
     - ansible.utils
 
+additional_build_files:
+  # copy arbitrary files next to this EE def into the build context - we can refer to them later...
+  - src: release-notes.json
+    dest: /configs
 
 additional_build_steps:
   prepend_base:
+     - COPY _build/configs/release-notes.json /release-notes.json
+
      - RUN yum install -y git
 #    - RUN curl -o /release-notes.json https://raw.githubusercontent.com/timmayg/timmay-lab/main/release-notes.json
-#  append_base:
+  append_base:
 
 #    - ENV timmay_lab_version=v2.34b1
 #    - RUN yum -y update && yum install -y curl --allowerasing
