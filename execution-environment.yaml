@@ -8,7 +8,7 @@ images:
     # name: registry.redhat.io/ansible-automation-platform/ee-minimal-rhel8:latest
     # name: quay.io/centos/centos:stream9  # vanilla image
  
- dependencies:
+  dependencies:
   python_interpreter:
     # (optional) provide the name of an OS package to install
     package_system: python3.11
