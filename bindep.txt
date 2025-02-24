@@ -1,4 +1,0 @@
-git [platform:rpm]
-iputils [platform:rpm]
-nano [platform:rpm]
-podman [platform:rpm]
