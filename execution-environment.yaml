@@ -9,6 +9,6 @@ images:
 dependencies:
   ansible_core:
     package_pip: ansible-core
-  #  system: bindep.txt
-  python: requirements.txt
+  ansible_runner:
+    package_pip: ansible-runner
  
