@@ -11,7 +11,7 @@ dependencies:
     package_pip: ansible-runner
 
 additional_build_steps:
-  prepend:
+  prepend_final:
     - RUN dnf install -y podman ansible-builder shadow-utils
     - RUN usermod --add-subuids 100000-165536 --add-subgids 100000-165536 root
     - RUN mkdir -p /etc/containers && echo '[storage]' > /etc/containers/storage.conf
