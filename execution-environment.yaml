@@ -10,4 +10,13 @@ dependencies:
     package_pip: ansible-core
   ansible_runner:
     package_pip: ansible-runner
- 
+
+additional_build_steps:
+  prepend:
+    - RUN dnf install -y podman ansible-builder
+    - RUN echo "root:100000:65536" >> /etc/subuid
+    - RUN echo "root:100000:65536" >> /etc/subgid
+    - RUN mount --make-shared / 
+
+
+    
