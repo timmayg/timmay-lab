@@ -2,8 +2,7 @@ version: 3
 
 images:
   base_image:
-    name: quay.io/centos/centos:stream9
-
+    name: quay.io/rockylinux/rockylinux:9  # More stable alternative to CentOS Stream 9
 
 dependencies:
   ansible_core:
@@ -13,9 +12,8 @@ dependencies:
 
 additional_build_steps:
   prepend:
-    - RUN dnf install -y podman ansible-builder
-    - RUN echo "root:100000:65536" >> /etc/subuid
-    - RUN echo "root:100000:65536" >> /etc/subgid
-    - RUN mount --make-shared /
-
-
+    - RUN dnf install -y podman ansible-builder shadow-utils
+    - RUN usermod --add-subuids 100000-165536 --add-subgids 100000-165536 root
+    - RUN mkdir -p /etc/containers && echo '[storage]' > /etc/containers/storage.conf
+    - RUN echo 'mount_program="/usr/bin/fuse-overlayfs"' >> /etc/containers/storage.conf
+    - RUN systemctl enable podman.socket
