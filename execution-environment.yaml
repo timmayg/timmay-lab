@@ -19,4 +19,4 @@ additional_build_steps:
     - RUN usermod --add-subuids 100000-165536 --add-subgids 100000-165536 root
     - RUN mkdir -p /etc/containers && echo '[storage]' > /etc/containers/storage.conf
     - RUN echo 'mount_program="/usr/bin/fuse-overlayfs"' >> /etc/containers/storage.conf
-    - RUN systemctl enable podman.socket
+    #- RUN systemctl enable podman.socket
