@@ -9,14 +9,13 @@ dependencies:
     package_pip: ansible-core
   ansible_runner:
     package_pip: ansible-runner
-  ansible_builder:
-    package_pip: ansible-builder
-  podman:
-    package_pip: podman
+  python:
+    - podman
+    - ansible-builder  # Install ansible-builder via pip
 
 additional_build_steps:
   prepend_final:
-    # - RUN dnf install -y podman ansible-builder shadow-utils
+    - RUN dnf install -y shadow-utils
     - RUN usermod --add-subuids 100000-165536 --add-subgids 100000-165536 root
     - RUN mkdir -p /etc/containers && echo '[storage]' > /etc/containers/storage.conf
     - RUN echo 'mount_program="/usr/bin/fuse-overlayfs"' >> /etc/containers/storage.conf
